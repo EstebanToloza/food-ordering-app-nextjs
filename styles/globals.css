@@ -1,3 +1,7 @@
+:root {
+  --baseColor: #d1411e
+}
+
 html,
 body {
   padding: 0;
