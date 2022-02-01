@@ -7,6 +7,7 @@
     justify-content: space-between;
     position: sticky;
     top: 0;
+    z-index: 4;
 }
 
 .item {
@@ -55,8 +56,8 @@
 }
 
 .listItem {
-margin: 20px;
-font-weight: 500;
+    margin: 20px;
+    font-weight: 500;
 }
 
 .cart{

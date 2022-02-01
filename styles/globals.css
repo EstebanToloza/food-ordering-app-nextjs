@@ -1,5 +1,6 @@
 :root {
-  --baseColor: #d1411e
+  --baseColor: #d1411e;
+  --lightColor: #777;
 }
 
 html,
