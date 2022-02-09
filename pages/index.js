@@ -1,9 +1,9 @@
 import Head from 'next/head'
-import Image from 'next/image'
+import axios from 'axios'
 import Featured from '../components/Featured'
 import ProductList from '../components/ProductList'
 
-export default function Home() {
+export default function Home({allProducts}) {
   return (
     <div>
       <Head>
@@ -13,8 +13,18 @@ export default function Home() {
       </Head>
       <main>
         <Featured />
-        <ProductList />
+        <ProductList allProducts={allProducts} />
       </main>
     </div>
   )
+}
+
+export const getServerSideProps = async () => {
+  const res = await axios.get("http://localhost:3000/api/products");
+
+  return {
+    props: {
+      allProducts: res.data
+    }
+  }
 }
