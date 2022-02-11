@@ -6,6 +6,7 @@ import axios from "axios";
 const Product = ({product}) => {
   const [price, setPrice] = useState(product.prices[0]);
   const [size, setSize] = useState(0);
+  const [quantity, setQuantity] = useState(1)
   const [extras, setExtras] = useState([])
 
   const changePrice = (number) => {
@@ -74,7 +75,7 @@ const Product = ({product}) => {
           ))}    
         </div>
         <div className={styles.add}>
-            <input type="number" defaultValue={1} className={styles.quantity}/>
+            <input onChange={(e) => setQuantity(e.target.value)} type="number" defaultValue={1} className={styles.quantity}/>
             <button className={styles.button}>Add to Cart</button>
         </div>
       </div>

@@ -8,7 +8,9 @@ const ProductCard = ({product}) => {
   return (
     <div className={styles.container}>
       <Link href={`/product/${product._id}`} passHref>
-        <Image src={img} alt="pizza" width="500" height="500" />
+        <a>
+          <Image src={img} alt="pizza" width="500" height="500" />
+        </a>
       </Link>
       <h1 className={styles.title}>{title}</h1>
       <span className={styles.price}>{prices[0]}</span>
